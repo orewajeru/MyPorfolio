@@ -3,22 +3,39 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/normalize.css" />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
     <title>Jere's Portfolio</title>
   </head>
   <body>
     <header>
       <nav class="nav-container">
         <ul class="nav-bg">
-          <li><a href="#" class="nav__link">About me</a></li>
-          <li><a href="#" class="nav__link">Skills & Hobbies</a></li>
-          <li><a href="#" class="nav__link">My Projects</a></li>
-          <li><a href="#" class="nav__link">Contact Me!</a></li>
+          <li><a href="#about-me" class="nav__link">About me</a></li>
+          <li>
+            <a href="#skills-hobbies" class="nav__link">Skills & Hobbies</a>
+          </li>
+          <li><a href="#my-projects" class="nav__link">My Projects</a></li>
+          <li><a href="#contact" class="nav__link">Contact Me!</a></li>
         </ul>
       </nav>
     </header>
 
     <main>
-      <section class="Introduction">
+      <img
+        src="/img/go-up-button.svg"
+        alt=""
+        id="buttonUp"
+        onclick="clickToUp()"
+      />
+
+      <section id="introduction">
         <img
           src="/img/avatar.png"
           alt=""
@@ -26,15 +43,11 @@
           width="20%"
         />
         <h1 class="title header-h1__text">
-          Hi, I'm Jeremias Vivas and design websites!
+          Hi, I'm Jeremias and I design websites!
         </h1>
         <p class="text header-p__info">
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusantium,
-          repellat. Tempore reiciendis similique odit ad mollitia dolor
-          inventore labore soluta nulla quae deserunt ea velit sed, id voluptas
-          voluptatibus voluptates fuga harum doloribus. Obcaecati aspernatur rem
-          necessitatibus qui dolore doloribus, voluptatum sapiente eaque,
-          possimus magni quas quae tenetur distinctio odit!
+          I'm from Argentina, Córdoba, and I'm graduated from Teclab Institute.
+          As des
         </p>
         <ul class="social__display">
           <li><a href="#" class="social header-a__link">GitHub</a></li>
@@ -45,7 +58,7 @@
         </ul>
       </section>
 
-      <section class="About-Me">
+      <section id="about-me">
         <div class="aboutme-container">
           <h2 class="subtitle aboutme-h2__title">About Me</h2>
           <p class="text aboutme-p__info">
@@ -56,32 +69,84 @@
             commodi atque, iste voluptatibus accusantium porro assumenda neque
             voluptatem. Excepturi, quidem ab!
           </p>
-          <img src="/img/avatar.png" alt="" width="10%" />
+          <img width="20%" src="/img/avatar.png" alt="" width="10%" />
         </div>
       </section>
 
-      <section class="Skills & Hobbies">
+      <section id="skills-hobbies">
         <h2 class="subtitle info-h2__title">My Skills & Hobbies</h2>
         <div class="skills__container">
-          <h3 class="subtitle"></h3>
+          <h3 class="subtitle">Skills</h3>
           <div class="skills__display">
-            <img src="" alt="" />
-            <img src="" alt="" />
-            <img src="" alt="" />
-            <img src="" alt="" />
+            <img width="20%" src="/img/css.svg" alt="" />
+            <img width="20%" src="/img/html.svg" alt="" />
+            <img width="20%" src="/img/tailwind.svg" alt="" />
+            <img width="20%" src="/img/js.svg" alt="" />
           </div>
         </div>
         <div class="hobbies__container">
-          <h3 class="subtitle"></h3>
+          <h3 class="subtitle">Hobbies</h3>
           <div class="hobbies__display">
-            <img src="" alt="" />
-            <img src="" alt="" />
-            <img src="" alt="" />
-            <img src="" alt="" />
+            <img width="20%" src="/img/design.svg" alt="" />
+            <img width="20%" src="/img/videogames.svg" alt="" />
+            <img width="20%" src="/img/meeting.svg" alt="" />
+            <img width="20%" src="/img/naruto.svg" alt="" />
+          </div>
+        </div>
+      </section>
+
+      <section id="my-projects">
+        <h2 class="title">My Projects</h2>
+        <div class="cards__display">
+          <div class="cards-bg">
+            <img width="20%" src="/img/cryptext.png" alt="" />
+          </div>
+          <div class="cards-bg">
+            <img width="20%" src="/img/cryptext.png" alt="" />
+          </div>
+          <div class="cards-bg">
+            <img width="20%" src="/img/cryptext.png" alt="" />
+          </div>
+          <div class="cards-bg">
+            <img width="20%" src="/img/cryptext.png" alt="" />
+          </div>
+        </div>
+      </section>
+
+      <section id="contact">
+        <h2 class="subtitle">Contact Me!</h2>
+        <p class="text">
+          Complete the form below and I will contact you as soon as posible
+        </p>
+        <div class="contact__container">
+          <div class="img__display">
+            <img width="20%" src="" alt="" srcset="" />
+          </div>
+          <div class="form__display">
+            <form action="" class="form__container">
+              <label for="" class="label__content">Name</label>
+              <input type="text" name="" id="" />
+              <label for="" class="label__content">Email</label>
+              <input type="text" name="" id="" />Asunto<label
+                for=""
+                class="label__content"
+              ></label
+              ><input type="text" name="" id="" />Message<label
+                for=""
+                class="label-content"
+              ></label
+              ><input type="text" name="" id="" /><button type="submit">
+                Send
+              </button>
+            </form>
           </div>
         </div>
       </section>
     </main>
-    <footer></footer>
+
+    <footer>
+      <p class="text footer-text">Developed by Jeremias Vivas</p>
+    </footer>
   </body>
+  <script src="/source/js/index.js"></script>
 </html>
