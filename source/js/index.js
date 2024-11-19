@@ -1,17 +1,38 @@
 const buttonToUp = document.getElementById("buttonUp");
+var navbar = document.getElementById("navbar");
 
+// Button Up appear when scroll down.
 function goUp() {
   window.addEventListener("scroll", () => {
     var scroll = document.documentElement.scrollTop;
     if (scroll > 400) {
       buttonToUp.style.opacity = 100;
-      buttonToUp.style.right = 5 + "rem";
+      buttonToUp.style.right = 2 + "rem";
     } else {
       buttonToUp.style.right = -10 + "rem";
       buttonToUp.style.opacity = 0;
     }
   });
 }
+
+// Button Hover..
+buttonToUp.addEventListener("mouseover", function () {
+  buttonToUp.style.opacity = "0";
+  setTimeout(() => {
+    buttonToUp.src = "/img/clickedbutton.svg";
+    buttonToUp.style.opacity = "1";
+  }, 110);
+});
+
+buttonToUp.addEventListener("mouseout", function () {
+  buttonToUp.style.opacity = "0";
+  setTimeout(() => {
+    buttonToUp.src = "/img/go-up-button.svg";
+    buttonToUp.style.opacity = "1";
+  }, 110);
+});
+
+// Click to Up Button
 function clickToUp() {
   buttonToUp.addEventListener("click", () => {
     window.scrollTo({
@@ -20,5 +41,14 @@ function clickToUp() {
     });
   });
 }
+
+// Scroll to top button
+window.onscroll = function () {
+  if (window.scrollY > 50) {
+    navbar.classList.add("scroll");
+  } else {
+    navbar.classList.remove("scroll");
+  }
+};
 
 goUp();
