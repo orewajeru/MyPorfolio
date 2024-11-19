@@ -16,46 +16,63 @@
   <body>
     <header>
       <nav class="nav-container">
-        <ul class="nav-bg">
-          <li><a href="#about-me" class="nav__link">About me</a></li>
+        <ul class="nav-bg" id="navbar">
+          <li><a href="#about-me" class="link nav__link">About me</a></li>
           <li>
-            <a href="#skills-hobbies" class="nav__link">Skills & Hobbies</a>
+            <a href="#skills-hobbies" class="link nav__link"
+              >Skills & Hobbies</a
+            >
           </li>
-          <li><a href="#my-projects" class="nav__link">My Projects</a></li>
-          <li><a href="#contact" class="nav__link">Contact Me!</a></li>
+          <li><a href="#my-projects" class="link nav__link">My Projects</a></li>
+          <li><a href="#contact" class="link nav__link">Contact Me!</a></li>
         </ul>
       </nav>
     </header>
+    <img
+      src="/img/go-up-button.svg"
+      alt=""
+      class="img go-up-button"
+      id="buttonUp"
+      onclick="clickToUp()"
+    />
 
     <main>
-      <img
-        src="/img/go-up-button.svg"
-        alt=""
-        id="buttonUp"
-        onclick="clickToUp()"
-      />
-
       <section id="introduction">
         <img
           src="/img/avatar.png"
-          alt=""
+          alt="Boy"
           class="avatar header-img__avatar"
-          width="20%"
         />
-        <h1 class="title header-h1__text">
-          Hi, I'm Jeremias and I design websites!
-        </h1>
-        <p class="text header-p__info">
-          I'm from Argentina, Córdoba, and I'm graduated from Teclab Institute.
-          As des
-        </p>
-        <ul class="social__display">
-          <li><a href="#" class="social header-a__link">GitHub</a></li>
-          <li><a href="#" class="social header-a__link">LinkedIn</a></li>
-          <li>
-            <a href="#" class="social header-a__link">My CV Here!</a>
-          </li>
-        </ul>
+
+        <div class="intro__texts">
+          <h1 class="title header-h1__text">
+            Hi, I'm Jeremias and I design websites!
+          </h1>
+          <p class="text header-p__info">
+            I'm from Argentina, Córdoba, and I'm graduated from Teclab Institute
+            as Web Developer. Now, I'm studying UX/UI Design at the same
+          </p>
+          <ul class="social__display">
+            <li>
+              <a href="#" class="social header-a__link"
+                >GitHub
+                <img class="icon" src="/img/github.svg" />
+              </a>
+            </li>
+            <li>
+              <a href="#" class="social header-a__link"
+                >LinkedIn
+                <img class="icon" src="/img/linkedin.svg" />
+              </a>
+            </li>
+            <li>
+              <a href="#" class="social header-a__link"
+                >My CV Here!
+                <img class="icon" src="/img/curriculum.svg" />
+              </a>
+            </li>
+          </ul>
+        </div>
       </section>
 
       <section id="about-me">
@@ -69,7 +86,13 @@
             commodi atque, iste voluptatibus accusantium porro assumenda neque
             voluptatem. Excepturi, quidem ab!
           </p>
-          <img width="20%" src="/img/avatar.png" alt="" width="10%" />
+          <img
+            width="20%"
+            src="/img/avatar.png"
+            alt=""
+            width="10%"
+            class="avatar aboutme-img__avatar"
+          />
         </div>
       </section>
 
