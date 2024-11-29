@@ -1,7 +1,7 @@
 const buttonToUp = document.getElementById("buttonUp");
 var navbar = document.getElementById("navbar");
 
-// Button Up appear when scroll down.
+//NOTE: Button Up appear when scroll down.
 function goUp() {
   window.addEventListener("scroll", () => {
     var scroll = document.documentElement.scrollTop;
@@ -15,16 +15,8 @@ function goUp() {
   });
 }
 
-// Button Hover..
+//NOTE: Image changes when mouse hover.
 buttonToUp.addEventListener("mouseover", function () {
-  buttonToUp.style.opacity = "0";
-  setTimeout(() => {
-    buttonToUp.src = "/img/clickedbutton.svg";
-    buttonToUp.style.opacity = "1";
-  }, 110);
-});
-
-buttonToUp.addEventListener("mouseout", function () {
   buttonToUp.style.opacity = "0";
   setTimeout(() => {
     buttonToUp.src = "/img/go-up-button.svg";
@@ -32,7 +24,15 @@ buttonToUp.addEventListener("mouseout", function () {
   }, 110);
 });
 
-// Click to Up Button
+buttonToUp.addEventListener("mouseout", function () {
+  buttonToUp.style.opacity = "0";
+  setTimeout(() => {
+    buttonToUp.src = "/img/clickedButton.svg";
+    buttonToUp.style.opacity = "1";
+  }, 110);
+});
+
+//NOTE: Click to Up Button
 function clickToUp() {
   buttonToUp.addEventListener("click", () => {
     window.scrollTo({
@@ -42,7 +42,7 @@ function clickToUp() {
   });
 }
 
-// Scroll to top button
+//NOTE: Scroll to top button
 window.onscroll = function () {
   if (window.scrollY > 50) {
     navbar.classList.add("scroll");
