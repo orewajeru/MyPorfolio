@@ -1,10 +1,7 @@
 html {
-  background-image: linear-gradient(
-    -225deg,
-    #ac32e4 0%,
-    #7918f2 48%,
-    #4801ff 100%
-  );
+  background-color: #330256;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='536' height='64.3' viewBox='0 0 1000 120'%3E%3Cg fill='none' stroke='%234C0278' stroke-width='10' %3E%3Cpath d='M-500 75c0 0 125-30 250-30S0 75 0 75s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 45c0 0 125-30 250-30S0 45 0 45s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 105c0 0 125-30 250-30S0 105 0 105s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 15c0 0 125-30 250-30S0 15 0 15s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500-15c0 0 125-30 250-30S0-15 0-15s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 135c0 0 125-30 250-30S0 135 0 135s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3C/g%3E%3C/svg%3E");
+  background-attachment: fixed;
   scroll-behavior: smooth;
   font-family: Karla, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
     Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
@@ -22,6 +19,20 @@ body {
   box-sizing: inherit;
 }
 
+/* General Styles */
+
+.text {
+  color: rgb(201, 157, 255);
+  font-size: 2rem;
+}
+
+.subtitle {
+  text-align: center;
+  font-size: 2.8rem;
+  color: white;
+  margin: 0;
+}
+
 /* Button to Up */
 #buttonUp {
   position: fixed;
@@ -31,6 +42,7 @@ body {
   cursor: pointer;
   opacity: 0;
   transition: all 0.5s;
+  z-index: 5;
 }
 
 /* Header Classes */
@@ -53,7 +65,7 @@ body {
 }
 .nav-bg li,
 .nav-bg a {
-  color: #601cba;
+  color: #8f41f5;
   position: relative;
   text-decoration: none;
   list-style: none;
@@ -61,15 +73,20 @@ body {
   font-weight: bold;
 }
 
-.nav-bg li:after {
+.nav-bg li::before {
   content: "";
-  position: absolute;
+  display: flex;
+  position: relative;
   background-color: white;
   height: 0.3rem;
-  width: 0;
-  left: 0;
-  bottom: -0.5rem;
+  bottom: -2.5rem;
+  width: 20%;
+  margin: auto;
   transition: 0.3s;
+}
+
+.nav-bg li:hover::before {
+  width: 95%;
 }
 
 .nav-bg li:hover:after {
@@ -94,6 +111,10 @@ body {
 
 .intro__texts {
   margin-right: 5rem;
+  background-color: rgb(142, 48, 242);
+  height: fit-content;
+  padding: 4rem;
+  border-radius: 5rem;
 }
 
 .title.header-h1__text {
@@ -101,9 +122,6 @@ body {
   color: white;
 }
 
-.text.header-p__info {
-  font-size: 2rem;
-}
 .social__display {
   display: flex;
   font-size: 1.9rem;
@@ -135,37 +153,213 @@ body {
   position: relative;
 }
 
-.header-a__link:hover::before {
+.social__display > li:hover {
+  transform: scale(1.1);
+  transition: 0.2s;
+}
+.social__display a:active {
+  background-color: #ab870e;
+  transition: 0.2s;
+}
+
+/* About Me Section */
+#about-me {
+  margin: 15rem 10rem 25rem 10rem;
+  text-align: center;
+  background-color: rgba(203, 130, 255, 0.381);
+  backdrop-filter: blur(0.1rem);
+  border-radius: 2rem;
+  padding: 5rem;
+  color: white;
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+  animation-delay: 0.4s;
+}
+
+.aboutme-p__info {
+  font-size: 2rem;
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    scale: 0.5;
+  }
+  to {
+    opacity: 1;
+    scale: 1;
+  }
+}
+
+/* Skills & Hobbies Section */
+#skills-hobbies {
+  background-color: #27043d;
+  margin: auto;
+  color: white;
+  height: 75rem;
+  padding: 4rem;
+}
+
+#skills-hobbies .container {
+  margin-top: 5rem;
+}
+
+.content-display {
+  display: flex;
+  gap: 5rem;
+  text-align: center;
+  margin: 2rem 20rem;
+}
+
+.content-display img {
+  width: 50%;
+  background-color: #63089b;
+  padding: 2rem;
+  border-radius: 2rem;
+}
+
+.img__text {
+  color: #fce188;
+  font-size: 1.9rem;
+  font-weight: 600;
+}
+.container h3 {
+  margin-top: 2rem;
+}
+
+.container h3::before {
   content: "";
-  position: absolute;
+  display: flex;
+  position: relative;
+  background-color: rgb(255, 214, 7);
+  height: 0.3rem;
+  bottom: -3.5rem;
+  width: 5%;
+  margin: auto;
+}
+
+.skills__container {
+  animation: appearFromLeft linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+}
+
+.skills__display {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  row-gap: 5rem;
+  place-items: center;
+}
+
+.hobbies__container {
+  animation: appearFromRight linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+}
+
+.hobbies__display {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  row-gap: 5rem;
+  place-items: center;
+}
+
+@keyframes appearFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-10rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes appearFromRight {
+  from {
+    opacity: 0;
+    transform: translateX(10rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Projects Section */
+
+#my-projects {
+  background-color: #1b022b;
+  padding: 4rem;
+  height: fit-content;
+}
+
+.projects-h3__title {
+  margin-top: 5rem;
+}
+
+ .cards__display {
+  margin: 5rem 20rem;
+  display: grid;
+  place-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(60rem, 1fr));
+  gap: 5rem;
+
+}
+
+.card-container {
+  width: 80%;
+  height: 35rem;
+  overflow: hidden;
+  position: relative; 
+}
+
+.card-container img {
+  width: 100%; 
+  height: 35rem; 
+  border-radius: 2rem;
+}
+
+.card__data{
+  position: relative;
+  background: rgba(0, 0, 0, 0.5);
+  top: -15rem;
+  padding: .09rem;
+  border-radius: 5rem 5rem 0rem 0rem;
+  width: 95%;
+  margin: auto;
+  opacity: 0;
+  transition: opacity .2s;
+  text-align: center;
+}
+
+.overlay {
+  position: absolute; 
   top: 0;
   left: 0;
-  z-index: -1;
-  width: 103%;
-  height: 103%;
-  background: linear-gradient(
-    45deg,
-    rgb(89, 0, 255),
-    rgb(128, 0, 70),
-    rgb(251, 173, 83),
-    rgb(255, 183, 0),
-    rgb(165, 40, 165),
-    rgb(245, 143, 197),
-    rgb(97, 13, 193)
-  );
-  background-size: 800%;
-  border-radius: 1.2rem;
-  filter: blur(0.8rem);
-  animation: glow 20s linear infinite;
+  width: 100%;
+  height: 35rem;
+  border-radius: 2rem;
+  background-color: rgba(0, 0, 0, 0.5); 
+  opacity: 0; 
+  transition: opacity 0.3s; 
 }
-@keyframes glow {
+
+.card-container:hover .overlay{
+  opacity: 1; 
+}
+
+.card-container:hover .card__data{
+  animation: fadeUp forwards .3s;
+}
+
+@keyframes fadeUp{
   0% {
-    background-position: 0 0;
+    top: 1rem;
+    border-radius: 0;
   }
-  50% {
-    background-position: 400% 0;
-  }
-  100% {
-    background-position: 0 0;
+  100%{
+    opacity: 1;
+    top: -15rem;
   }
 }
