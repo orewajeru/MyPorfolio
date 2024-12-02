@@ -1,6 +1,7 @@
 const buttonToUp = document.getElementById("buttonUp");
 var navbar = document.getElementById("navbar");
 
+
 //NOTE: Button Up appear when scroll down.
 function goUp() {
   window.addEventListener("scroll", () => {
@@ -50,5 +51,6 @@ window.onscroll = function () {
     navbar.classList.remove("scroll");
   }
 };
+
 
 goUp();

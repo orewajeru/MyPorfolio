@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="html">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -17,7 +17,7 @@
     <header>
       <nav class="nav-container">
         <ul class="nav-bg" id="navbar">
-          <li><a href="#about-me" class="link nav__link">About me</a></li>
+          <li><a href="#introduction" class="link nav__link">About me</a></li>
           <li>
             <a href="#skills-hobbies" class="link nav__link"
               >Skills & Hobbies</a
@@ -190,39 +190,63 @@
       </section>
 
       <section id="contact">
+
         <h2 class="subtitle contact-form__title">Contact Me!</h2>
         <p class="text contact-form__text">
           If you want to contact me, you can do it through the following means
           Complete the form below and I will contact you as soon as posible
         </p>
+
         <div class="contact__container">
-          <div class="img__display">
-            <img src="" alt="" srcset="" />
-          </div>
-          <div class="form__display">
-            <form action="" class="form__container">
-              <label for="" class="label__content">Name</label>
-              <input type="text" name="" id="" />
-              <label for="" class="label__content">Email</label>
-              <input type="text" name="" id="" />Asunto<label
-                for=""
-                class="label__content"
-              ></label
-              ><input type="text" name="" id="" />Message<label
-                for=""
-                class="label-content"
-              ></label
-              ><input type="text" name="" id="" /><button type="submit">
-                Send
-              </button>
+          
+          <img src="/img/form image.jpg" alt="" srcset="" class="img-form"/>
+
+          <form action="" class="form__container" method="POST" id="form">
+
+              <label for="name" class="label form-label">Name</label>
+                <input 
+                type="text" 
+                name="name" 
+                placeholder="Jhon, Joe or Finn?" 
+                id="name" 
+                maxlenght="12" 
+                required 
+                class="input form-input" />
+
+              <label for="email" class="label form-label">Email</label>
+                <input 
+                type="email" 
+                name="email" 
+                placeholder="messithebest@hotmail.com...for example" 
+                maxlenght="30" 
+                required 
+                id="email" 
+                class="input form-input" />
+
+                <label for="textarea" class="label form-label">Message</label>
+                  <textarea 
+                  name="textarea" 
+                  id="textarea"
+                  class="form-textarea"
+                  maxlength="600"
+                  placeholder="I want to talk about..."
+                  required
+                  form="form"
+                  cols="50"
+                  rows="10"
+                  ></textarea>
+              <button type="submit" class="button form-button">Send</button>
+
             </form>
-          </div>
+
         </div>
+
       </section>
+
     </main>
 
     <footer>
-      <p class="text footer-text">Developed by Jeremias Vivas</p>
+      <p class="text footer-text">Developed by Jeremias</p>
     </footer>
   </body>
   <script src="/source/js/index.js"></script>
