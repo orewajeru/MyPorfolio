@@ -1,5 +1,10 @@
 const buttonToUp = document.getElementById("buttonUp");
-var navbar = document.getElementById("navbar");
+const burger = document.getElementById("burger")
+const navbar = document.getElementById("navbar");
+const overlay = document.getElementById("shadow");
+
+
+
 
 
 //NOTE: Button Up appear when scroll down.
@@ -52,6 +57,7 @@ window.onscroll = function () {
   }
 };
 
+<<<<<<< HEAD
 
 
 
@@ -82,5 +88,31 @@ document.addEventListener('DOMContentLoaded', function() {
 
     overlay.addEventListener('click', hideMenu);
 });
+=======
+//NOTE: Burger Menu
+burger.addEventListener('click', function(){
+  if(navbar.style.left === '-30'+ 'rem'){
+    navbar.style.transition = '0.3s';
+    navbar.style.left = '0' + 'rem';
+    burger.src = "/img/cross.svg";
+    overlay.style.display = 'block';
+}
+  else{
+    navbar.style.left = '-30' + 'rem';
+    burger.src = "/img/burger-simple.svg";
+    overlay.style.display = 'none';
+  }
+})
+
+let links = document.getElementsByClassName('link');
+for (let i = 0; i < links.length; i++) {
+    links[i].addEventListener('click', function() {
+        navbar.style.left = '-30rem';
+        overlay.style.display = 'none';
+        burger.src = "/img/burger-simple.svg";
+    });
+}
+>>>>>>> ad36af9 (Edit Html structure and Modify some functions)
 
 goUp();
+
