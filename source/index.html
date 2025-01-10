@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" id="html">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -16,16 +16,19 @@
   <body>
     <header>
       <nav class="nav-container">
+        <img src="/img/burger-simple.svg" alt="" srcset="" class="icon burger-menu" id="burger">
+        
         <ul class="nav-bg" id="navbar">
-          <li><a href="#introduction" class="link nav__link">About me</a></li>
+          <li><a href="#introduction" id="link" class="link nav__link">About me</a></li>
           <li>
-            <a href="#skills-hobbies" class="link nav__link"
+            <a href="#skills-hobbies" id="link" class="link nav__link"
               >Skills & Hobbies</a
-            >
+            >    
           </li>
-          <li><a href="#my-projects" class="link nav__link">My Projects</a></li>
-          <li><a href="#contact" class="link nav__link">Contact Me!</a></li>
+          <li><a href="#my-projects" id="link" class="link nav__link">My Projects</a></li>
+          <li><a href="#contact" id="link" class="link nav__link">Contact Me!</a></li>
         </ul>
+        
       </nav>
     </header>
     <img
@@ -35,7 +38,6 @@
       id="buttonUp"
       onclick="clickToUp()"
     />
-
     <main>
       <section id="introduction">
         <img
@@ -55,23 +57,26 @@
           </p>
           <ul class="social__display">
             <li>
-              <a href="#" class="social header-a__link"
-                >GitHub
+              <a href="#" class="social header-a__link">
+                GitHub
                 <img class="icon" src="/img/github.svg" />
               </a>
             </li>
+
             <li>
               <a href="#" class="social header-a__link"
                 >LinkedIn
                 <img class="icon" src="/img/linkedin.svg" />
               </a>
             </li>
+
             <li>
               <a href="#" class="social header-a__link"
                 >My CV Here!
                 <img class="icon" src="/img/curriculum.svg" />
               </a>
             </li>
+            
           </ul>
         </div>
       </section>
@@ -89,9 +94,7 @@
       </section>
 
       <section id="skills-hobbies">
-        <div class="container">
-          <h2 class="subtitle info-h2__title">My Skills & Hobbies</h2>
-          <div class="content-display">
+            <div class="container">
             <div class="skills__container">
               <h3 class="subtitle skills-h3__title">My Skills</h3>
               <div class="skills__display">
@@ -116,6 +119,7 @@
                 </figure>
               </div>
             </div>
+
             <div class="hobbies__container">
               <h3 class="subtitle hobbies-h3__title">My Hobbies</h3>
               <div class="hobbies__display">
@@ -141,7 +145,6 @@
               </div>
             </div>
           </div>
-        </div>
       </section>
 
       <section id="my-projects">
@@ -150,36 +153,36 @@
         <div class="cards__display">
 
          <article class="card-container">
-          <img src="/img/proyecto1.png" alt="" srcset="">
+          <img src="/img/proyecto1.png" class="card-img" alt="" srcset="">
           <div class="overlay"></div>
           <div class="card__data">
-            <h3 class="project__title">Crunchyroll</h3>
+            <h3 class="project__title">Cryptext</h3>
             <p class="text data__text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus est dolore animi quis culpa consequuntur quidem dicta numquam, magni obcaecati.</p>
           </div>
          </article>
 
-         <article class="card card-container">
+         <article class="card-container">
           
-          <img src="/img/proyecto2.jpg" alt="" srcset="">
+          <img src="/img/proyecto2.jpg" class="card-img" alt="" srcset="">
           <div class="overlay"></div>
         
           <div class="card__data">
-            <h3 class="project__title">Crunchyroll</h3>
+            <h3 class="project__title">Sportea</h3>
             <p class="text data__text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus est dolore animi quis culpa consequuntur quidem dicta numquam, magni obcaecati.</p>
           </div>
          </article>
 
          <article class="card-container">
-          <img src="/img/proyecto3.jpg" alt="" srcset="">
+          <img src="/img/proyecto3.jpg" class="card-img" alt="" srcset="">
           <div class="overlay"></div>
           <div class="card__data">
-            <h3 class="project__title">Crunchyroll</h3>
+            <h3 class="project__title">Foodst</h3>
             <p class="text data__text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus est dolore animi quis culpa consequuntur quidem dicta numquam, magni obcaecati.</p>
           </div>
          </article>
 
          <article class="card-container">
-          <img src="/img/proyecto4.png" alt="" srcset="">
+          <img src="/img/proyecto4.png" class="card-img" alt="" srcset="">
           <div class="overlay"></div>
             <div class="card__data">
               <h3 class="project__title">Crunchyroll</h3>
@@ -192,17 +195,13 @@
       <section id="contact">
 
         <h2 class="subtitle contact-form__title">Contact Me!</h2>
-        <p class="text contact-form__text">
-          If you want to contact me, you can do it through the following means
-          Complete the form below and I will contact you as soon as posible
-        </p>
+        <div class="contact-bg">
 
         <div class="contact__container">
-          
-          <img src="/img/form image.jpg" alt="" srcset="" class="img-form"/>
+          <img src="/img/form-image.jpg" alt="" srcset="" class="img-form"/>
 
           <form action="" class="form__container" method="POST" id="form">
-
+          
               <label for="name" class="label form-label">Name</label>
                 <input 
                 type="text" 
@@ -217,7 +216,7 @@
                 <input 
                 type="email" 
                 name="email" 
-                placeholder="messithebest@hotmail.com...for example" 
+                placeholder="messithebest@hotmail.com... for example" 
                 maxlenght="30" 
                 required 
                 id="email" 
@@ -227,7 +226,7 @@
                   <textarea 
                   name="textarea" 
                   id="textarea"
-                  class="form-textarea"
+                  class="input form-textarea"
                   maxlength="600"
                   placeholder="I want to talk about..."
                   required
@@ -240,14 +239,11 @@
             </form>
 
         </div>
-
+      </div>
       </section>
 
     </main>
-
-    <footer>
-      <p class="text footer-text">Developed by Jeremias</p>
-    </footer>
+    <div id="shadow"></div>
   </body>
   <script src="/source/js/index.js"></script>
 </html>
