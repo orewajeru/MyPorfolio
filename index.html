@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/normalize.css" />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Jere's Portfolio</title>
+  </head>
+  <body>
+    <header>
+      <nav class="nav-container">
+       <div class="menu-toggle" onclick="toggleMenu()">
+        <img src="/img/burger-simple.svg" alt="" srcset="" class="icon burger-menu" id="burger">
+      </div>
+        <ul class="nav-bg" id="navbar"> 
+          <li><a href="#introduction" id="link" class="link nav__link">About me</a></li>
+          <li>
+            <a href="#skills-hobbies" id="link" class="link nav__link"
+              >Skills & Hobbies</a
+            >    
+          </li>
+          <li><a href="#my-projects" id="link" class="link nav__link">My Projects</a></li>
+          <li><a href="#contact" id="link" class="link nav__link">Contact Me!</a></li>
+        </ul>
+        
+      </nav>
+    </header>
+    <img
+      src="/img/clickedButton.svg"
+      alt=""
+      class="img go-up-button"
+      id="buttonUp"
+      onclick="clickToUp()"
+    />
+    <main>
+      <section id="introduction">
+        <img
+          src="/img/avatar.png"
+          alt="Boy"
+          class="avatar header-img__avatar"
+        />
+
+        <div class="intro__texts">
+          <h1 class="title header-h1__text">
+            Hi, I'm Jeremias and I design websites!
+          </h1>
+          <p class="text header-p__info">
+            I'm from Córdoba, Argentina, and I'm graduated from Teclab Institute
+            as Web Programming Technician. Now, I'm studying UX/UI Design to
+            improve my design skills.
+          </p>
+          <ul class="social__display">
+            <li>
+              <a href="#" class="social header-a__link">
+                GitHub
+                <img class="icon" src="/img/github.svg" />
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social header-a__link"
+                >LinkedIn
+                <img class="icon" src="/img/linkedin.svg" />
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social header-a__link"
+                >My CV Here!
+                <img class="icon" src="/img/curriculum.svg" />
+              </a>
+            </li>
+            
+          </ul>
+        </div>
+      </section>
+
+      <section id="about-me">
+        <h2 class="subtitle aboutme-h2__title">About Me</h2>
+        <p class="text aboutme-p__info">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem
+          laudantium ipsum necessitatibus dicta a eos molestias porro! Quos
+          culpa tempora et, voluptatibus dicta ab. Eveniet explicabo quia
+          placeat, nobis unde odio vero molestias? Iusto et ullam veniam alias
+          commodi atque, iste voluptatibus accusantium porro assumenda neque
+          voluptatem. Excepturi, quidem ab!
+        </p>
+      </section>
+
+      <section id="skills-hobbies">
+            <div class="container">
+            <div class="skills__container">
+              <h3 class="subtitle skills-h3__title">My Skills</h3>
+              <div class="skills__display">
+                <figure class="text img__text">
+                  <img src="/img/css.svg" alt="" />
+                  <figcaption>CSS3</figcaption>
+                </figure>
+
+                <figure class="text img__text">
+                  <img src="/img/html.svg" alt="" />
+                  <figcaption>HTML5</figcaption>
+                </figure>
+
+                <figure class="text img__text">
+                  <img src="/img/tailwind.svg" alt="" />
+                  <figcaption>CSS Tailwind</figcaption>
+                </figure>
+
+                <figure class="text img__text">
+                  <img src="/img/js.svg" alt="" />
+                  <figcaption>JavaScript</figcaption>
+                </figure>
+              </div>
+            </div>
+
+            <div class="hobbies__container">
+              <h3 class="subtitle hobbies-h3__title">My Hobbies</h3>
+              <div class="hobbies__display">
+                <figure class="text img__text">
+                  <img src="/img/design.svg" alt="" />
+                  <figcaption>Design</figcaption>
+                </figure>
+
+                <figure class="text img__text">
+                  <img src="/img/videogames.svg" alt="" />
+                  <figcaption>Videogames</figcaption>
+                </figure>
+
+                <figure class="text img__text">
+                  <img src="/img/meeting.svg" alt="" />
+                  <figcaption>Meeting with friends</figcaption>
+                </figure>
+
+                <figure class="text img__text">
+                  <img src="/img/naruto.svg" alt="" />
+                  <figcaption>Anime</figcaption>
+                </figure>
+              </div>
+            </div>
+          </div>
+      </section>
+
+      <section id="my-projects">
+        <h2 class="subtitle projects-h3__title">My Projects</h2>
+
+        <div class="cards__display">
+
+         <article class="card-container">
+          <img src="/img/proyecto1.png" class="card-img" alt="" srcset="">
+          <div class="overlay"></div>
+          <div class="card__data">
+            <h3 class="project__title">Cryptext</h3>
+            <p class="text data__text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus est dolore animi quis culpa consequuntur quidem dicta numquam, magni obcaecati.</p>
+            <a href="#" class="button btn__project">Learn More</a>
+          </div>
+         </article>
+
+         <article class="card-container">
+          
+          <img src="/img/proyecto2.jpg" class="card-img" alt="" srcset="">
+          <div class="overlay"></div>
+        
+          <div class="card__data">
+            <h3 class="project__title">Sportea</h3>
+            <p class="text data__text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus est dolore animi quis culpa consequuntur quidem dicta numquam, magni obcaecati.</p>
+            <a href="#" class="button btn__project">Learn More</a>
+          </div>
+         </article>
+
+         <article class="card-container">
+          <img src="/img/proyecto3.jpg" class="card-img" alt="" srcset="">
+          <div class="overlay"></div>
+          <div class="card__data">
+            <h3 class="project__title">Foodst</h3>
+            <p class="text data__text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus est dolore animi quis culpa consequuntur quidem dicta numquam, magni obcaecati.</p>
+            <a href="#" class="button btn__project">Learn More</a>
+          </div>
+         </article>
+
+         <article class="card-container">
+          <img src="/img/proyecto4.png" class="card-img" alt="" srcset="">
+          <div class="overlay"></div>
+            <div class="card__data">
+              <h3 class="project__title">Crunchyroll</h3>
+              <p class="text data__text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus est dolore animi quis culpa consequuntur quidem dicta numquam, magni obcaecati.</p>
+              <a href="#" class="button btn__project">Learn More</a>
+            </div>
+         </article>
+
+      </section>
+
+      <section id="contact">
+
+        <h2 class="subtitle contact-form__title">Contact Me!</h2>
+        <div class="contact-bg">
+
+        <div class="contact__container">
+          <img src="/img/form-image.jpg" alt="" srcset="" class="img-form"/>
+
+          <form action="" class="form__container" method="POST" id="form">
+          
+              <label for="name" class="label form-label">Name</label>
+                <input 
+                type="text" 
+                name="name" 
+                placeholder="Jhon, Joe or Finn?" 
+                id="name" 
+                maxlenght="12" 
+                required 
+                class="input form-input" />
+
+              <label for="email" class="label form-label">Email</label>
+                <input 
+                type="email" 
+                name="email" 
+                placeholder="messithebest@hotmail.com... for example" 
+                maxlenght="30" 
+                required 
+                id="email" 
+                class="input form-input" />
+
+                <label for="textarea" class="label form-label">Message</label>
+                  <textarea 
+                  name="textarea" 
+                  id="textarea"
+                  class="input form-textarea"
+                  maxlength="600"
+                  placeholder="I want to talk about..."
+                  required
+                  form="form"
+                  cols="50"
+                  rows="10"
+                  ></textarea>
+              <button type="submit" class="button form-button">Send</button>
+
+            </form>
+
+        </div>
+      </div>
+      </section>
+
+    </main>
+    <div id="shadow" onclick="hideMenu()"></div>
+  </body>
+  <script src="/source/js/index.js"></script>
+</html>
