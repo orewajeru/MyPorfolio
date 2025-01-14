@@ -697,7 +697,9 @@ textarea:focus {
   .overlay{
     display: none;
   }
-  
+  .card-container:hover .card__data {
+    animation:  none;
+  }
 
   /* @ FORM */
   #contact {
@@ -898,7 +900,10 @@ textarea:focus {
   .overlay{
     display: none;
   }
-  
+  .card-container:hover .card__data {
+    animation:  none;
+  }
+
 
   /* @ FORM */
   #contact {
@@ -1035,7 +1040,10 @@ textarea:focus {
   .overlay{
     display: none;
   }
-  
+  .card-container:hover .card__data {
+    animation:  none;
+  }
+
 
   /* @ FORM */
   
@@ -1153,6 +1161,9 @@ textarea:focus {
     display: none;
   }
   
+  .card-container:hover .card__data {
+    animation:  none;
+  }
 
   /* @ FORM */
   
@@ -1281,6 +1292,9 @@ textarea:focus {
     display: none;
   }
   
+  .card-container:hover .card__data {
+    animation:  none;
+  }
 
   /* @ FORM */
   
